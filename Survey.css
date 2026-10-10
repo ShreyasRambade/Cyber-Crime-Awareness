@@ -1,0 +1,213 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('Circuit.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.app{
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto  0;
+    border-radius: 10px;
+    padding: 30px;
+    background: rgba(30,41,59,0.85);
+    backdrop-filter:blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.app h1{
+    font-size: 25px;
+    background: linear-gradient(90deg, #38bdf8 0%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    border-bottom: 1px solid yellow;
+    padding-bottom: 30px;
+    text-align: center;
+
+}
+
+.quiz{
+    padding: 20px 0;
+    max-width: 600px;
+  
+
+}
+
+.quiz h2{
+    font-size: 18px;
+    color:gold;
+    font-weight: 600;
+
+}
+
+.btn{
+    background: #f8fafc;
+    color:#1e293b;
+    font-size:clamp(14px,2.5vw,16px);
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    margin:10px 0;
+    text-align:left ;
+    border-radius: 4px;
+    cursor:pointer;
+    transition:all 0.3s;
+}
+
+.btn:hover:not([disabled]){
+    background: #eff6ff;
+    color:#1d4ed8;
+    border-color: #2563eb;
+
+}
+
+.btn:disabled{
+    cursor:no-drop;
+}
+
+#next-btn{
+    background: gold;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    max-width: 200px;
+    border: 0;
+    padding: 10px;
+    margin:20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+#question{
+    color:#60a5fa;
+    font-size: clamp(18px,4vw,22px);
+}
+
+.correct{
+    background: #9aeabc;
+
+}
+.incorrect{
+    background: #ff9393;
+}
+
+header{
+    height:120px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+.National{
+    height:100px;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.National img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.State{
+    height:100px;
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.State img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.Title{
+    height: 100px;
+    width: 600px;
+    flex-shrink: 0;
+    padding: 10px;
+}
+
+.Title h1{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Rockwell;
+    color:gold;
+    
+
+
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 120px;            /* Slightly shorter header on small phones so it fits well */
+        padding: 10px 12px;       /* Smaller padding for mobile screens */
+    }
+
+    .National, 
+    .State {
+        width: 40px;              /* Scale down logos slightly on phones */
+        height: 40px;
+    }
+
+    .Title{
+        width: 45px;
+        height:45px;
+    }
+
+    
+}
+
+@media (max-width: 425px) {
+    header {
+        height: 130px;
+        padding: 12px 15px; /* Balanced padding so border spans full width */
+    }
+
+    .National, 
+    .State {
+        width: 45px;
+        height: 45px;
+    }
+
+    .Title{
+        width: 50px;
+        height:50px;
+    }
+
+
+}
+
+
+/*
+   3. SEPARATE MEDIA QUERY: MOBILE SMALL (375px & below)
+*/
+@media (max-width: 375px) {
+    header {
+        height: 110px;
+        padding: 10px 10px;
+    }
+
+    .National, 
+    .State {
+        width: 38px;
+        height: 38px;
+    }
+
+    .Title{
+        width: 43px;
+        height:43px;
+    }
+}

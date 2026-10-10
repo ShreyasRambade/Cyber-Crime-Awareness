@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(Circuit.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            text-align:center;
+            font-family:'Times New Roman', Times, serif;
+            color:gold;
+
+        }
+        .Introduction{
+            margin:auto;
+            border:5px solid;
+            height:350px;
+            width:400px;
+            display: flex;
+            justify-content: center;
+            flex-wrap:wrap;
+            border-color: #38BDF8;
+            border-radius:1em;
+            align-content:flex-start;
+            background: rgba(255,255,255,.2);
+
+        }
+        input{
+            height: 50px;
+            width:350px;
+            border-color: #60A5FA;
+            border-radius:1em;
+            border-width:5px;
+            border-style:solid;
+            background-color:#1E293B;
+            color:white;
+            font-size: larger;
+            font-family: rockwell;
+            
+            
+
+            
+        }
+
+        .username::placeholder,
+        textarea::placeholder {
+            color: #94A3B8; /* Muted Slate Gray */
+            opacity: 1; /* Required for Firefox to show the exact color */
+        }
+        #submit-btn{
+            border-radius:0.5em;
+            font-family: arial;
+            height:50px;
+            width:100px;
+            position: relative;
+            top:50px;
+            background-color: #06B6D4;
+            color:#0F172A;
+            font-size:17px;
+
+        }
+        #submit-btn:hover{
+            color:#2563EB;
+        }
+        h2{
+            color:#E2E8F0;
+        }
+
+
+       
+    </style>
+</head>
+<body>
+  
+    <div class="Main">
+        <h1>Cyber Crime Awareness Campaign!</h1>
+        <div class="Introduction">
+            <h2>Enter your name:-</h2>
+            <input type="text" id="username" placeholder="don't share credintials with anyone">
+            <button id="submit-btn">Start Quiz</button>
+      
+            
+        </div>
+
+       
+
+    </div>
+    <script>
+        const usernameInput=document.getElementById('username');
+        const submitBtn=document.getElementById('submit-btn');
+
+        submitBtn.addEventListener('click', () => {
+            const userName=usernameInput.value.trim();
+
+            if (userName === ""){
+                alert("Please enter your name");
+                usernameInput.focus();
+                return;
+            }
+            localStorage.setItem('quizUserName',userName);
+
+            window.location.href="Quiz Webpage.html";
+        });
+
+        
+    </script>
+</body>
+</html>
