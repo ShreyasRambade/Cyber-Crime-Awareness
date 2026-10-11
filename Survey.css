@@ -144,6 +144,9 @@ header{
     font-size: 1.8rem;
     text-align:center;
     white-space:nowrap;
+    padding:10px 0;
+    width:100%;
+    box-sizing:border-box;
     font-weight: 600;
     font-family: Rockwell;
     color:gold;
@@ -165,12 +168,14 @@ header{
     }
 
     .Title{
-        width: 45px;
-        height:45px;
+        width: 100%;
+        text-align:center;
+        padding:0 10px;
     }
 
     .Title h1{
         font-size:1.2rem;
+        
 
     }
 }
