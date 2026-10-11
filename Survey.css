@@ -141,7 +141,9 @@ header{
 }
 
 .Title h1{
-    font-size: 35px;
+    font-size: 1.8rem;
+    text-align:center;
+    white-space:nowrap;
     font-weight: 600;
     font-family: Rockwell;
     color:gold;
@@ -167,7 +169,10 @@ header{
         height:45px;
     }
 
-    
+    .Title h1{
+        font-size:1.2rem;
+
+    }
 }
 
 @media (max-width: 425px) {
